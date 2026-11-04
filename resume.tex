@@ -107,12 +107,9 @@
 \newcommand{\portfolioicon}{\raisebox{-0.5ex}{\includegraphics[height=10pt]{icons/portfolio-icon.png}}}
 \newcommand{\homeicon}{\raisebox{-0.5ex}{\includegraphics[height=10pt]{icons/house-solid.png}}}
 
-%-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{document}
-
 
 %----------HEADING----------
 % \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
@@ -130,7 +127,6 @@
     }
 \end{center}
 
-
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
@@ -147,50 +143,54 @@
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
+\begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, JavaScript, HTML/CSS, SQL, C++, C\#, C} \\
-     \textbf{Frameworks/Tools}{: React, Node.js, Flask, MongoDB, Material-UI, Unity, Linux, FastAPI, Uvicorn, aiosqlite, pytest, Git/GitHub, REST APIs, OAuth, Vite} \\
+        \textbf{Languages}{: Python, JavaScript, SQL, C/C++, C\#, HTML/CSS} \\
+        \textbf{Frameworks/Libraries}{: FastAPI, Flask, React, Node.js, pytest, Pydantic, aiosqlite, Vite} \\
+        \textbf{Cloud/DevOps}{: Docker, Docker Compose, GitHub Actions, GHCR, Linux, Ubuntu Server, Tailscale, CI/CD} \\
+        \textbf{Databases/Tools}{: SQLite, MongoDB, Git, GitHub, Jira, Arduino, REST, OAuth 2.0, RBAC}
     }}
 \end{itemize}
 
 
 %-----------PROJECTS-----------
 \section{Projects}
-    \resumeSubHeadingListStart
+\resumeSubHeadingListStart
 
     %---------PROJECT1---------
-        \resumeProjectHeading
-            {\textbf{IoT Wi-Fi Lighting System} $|$ \emph{Python, Javascript, Flask, React, C++}}{}
-            \resumeItemListStart
-                \resumeItem{Designed and built a network of Wi-Fi LED light tubes controlled in real time over a custom UDP protocol.}
-                \resumeItem{Developed a full-stack web application control interface using Flask and React, enabling instant color and animation triggering over local Wi-Fi.}
-                \resumeItem{Programmed ESP8266 microcontrollers in C++ to execute animations and process UDP lighting commands.}
-                \resumeItem{Engineered custom 3D-printed housings for durability and professional stage presentation.}
-                \resumeItem{Added real-time device status reporting so the web application can monitor connectivity and responsiveness.}
-            \resumeItemListEnd
+    \resumeProjectHeading
+        {\href{https://github.com/CasualCaleb/garage-sentinel}{\textbf{Garage Sentinel}} $|$ \emph{Python, FastAPI, Docker, Linux, GitHub Actions, Tailscale, pytest}}{}
+        \resumeItemListStart
+            \resumeItem{Architected and maintain a 24/7 self-hosted \textbf{cloud storage platform} on a dedicated Ubuntu Linux server, managing physical infrastructure, persistent storage, networking, and containerized production services.}
+            \resumeItem{Engineered a fully automated \textbf{CI/CD} pipeline using GitHub Actions, Docker Compose, and GHCR, deploying versioned container releases in \textbf{1--3 minutes} with automated health verification.}
+            \resumeItem{Developed asynchronous \textbf{FastAPI} REST services for media storage and system telemetry, implementing multi-provider OAuth, role-based authorization, secure account linking, and automated pytest tests.}
+            \resumeItem{Configured private remote access via \textbf{Tailscale}, enabling secure connectivity to the production server from outside the local network without publicly exposing application ports.}
+        \resumeItemListEnd
 
     %---------PROJECT2---------
-        \resumeProjectHeading
-            {\textbf{Food Rating App} $|$ \emph{Python, Javascript, Flask, React, MongoDB, Jira, GitHub}}{}
-            \resumeItemListStart
-                \resumeItem{Led a team of 5 to build a full-stack food-rating app for CSUF eateries, featuring an interactive Leaflet map UI, a Flask RESTful API, and a MongoDB database enabling responsive review handling.}
-                \resumeItem{Coordinated Jira sprints, managed task assignments, and oversaw GitHub version control and code reviews to stay aligned with burndown goals and ensure timely repository pushes.}
-                \resumeItem{Developed a React interface linking the Leaflet map to a dynamic review panel, implementing responsive state management and smooth review rendering.}
-                \resumeItem{Designed a review schema capturing store, rating, name, and comment fields, and implemented a like counter to support driven feedback.}
-            \resumeItemListEnd
-            
-    %---------PROJECT3---------
-        \resumeProjectHeading
-            {\textbf{McMullin Estates} $|$ \emph{Python, FastAPI, React, SQLite, pytest}}{}
-            \resumeItemListStart
-                \resumeItem{Developed a full-stack real estate web application with a FastAPI REST API, React frontend, and asynchronous SQLite persistence layer using aiosqlite.}
-                \resumeItem{Implemented Google OAuth authentication, session-based user authorization, role-protected admin endpoints, account management, and activity logging.}
-                \resumeItem{Built an automated pytest suite covering authentication, user, and admin workflows using isolated test databases, reusable fixtures, dependency overrides, and mocked OAuth flows.}
-            \resumeItemListEnd
-            
-\resumeSubHeadingListEnd
+    \resumeProjectHeading
+        {\href{https://github.com/CasualCaleb/ledtube-server.git}{\textbf{IoT DJ Lighting System}} $|$ \emph{Python, Flask, JavaScript, C++, Arduino, UDP}}{}
+        \resumeItemListStart
+            \resumeItem{Designed and fabricated \textbf{5--8 custom IoT lighting tubes} using ESP8266 microcontrollers, 60-LED arrays, and 3D-printed enclosures for \textbf{\$12 per unit}, achieving an estimated \textbf{88\% reduction in hardware costs} versus commercial alternatives.}
+            \resumeItem{Engineered a distributed Wi-Fi control system using custom \textbf{UDP} communication and embedded C++ firmware, supporting automatic device discovery, connectivity recovery, and synchronized animations.}
+            \resumeItem{Built a \textbf{Flask-based control interface} enabling real-time RGB lighting, BPM-synchronized animations, and independent device control from anywhere within local Wi-Fi coverage; tested through extended operation and live events.}
+        \resumeItemListEnd
 
+    %---------PROJECT3---------
+    \resumeProjectHeading
+        {\href{https://github.com/CasualCaleb/tuffys-belly.git}{\textbf{Tuffy's Belly}} $|$ \emph{Python, Flask, React, MongoDB, Jira}}{}
+        \resumeItemListStart
+            \resumeItem{Led a \textbf{5-member Agile development team}, coordinating Jira sprints, task assignments, and GitHub code reviews to deliver a full-stack campus dining platform.}
+            \resumeItem{Developed a \textbf{React and Flask REST API} application covering \textbf{15 dining locations}, integrating interactive Leaflet maps, MongoDB rating aggregation, and authenticated review management.}
+        \resumeItemListEnd
+
+    %---------PROJECT4---------
+    \resumeProjectHeading
+        {\href{https://github.com/CasualCaleb/McMullin-Estates}{\textbf{McMullin Estates}} $|$ \emph{Python, FastAPI, React, OAuth 2.0}}{}
+        \resumeItemListStart
+            \resumeItem{Built a \textbf{full-stack} real estate application integrating a \textbf{React} frontend and FastAPI REST backend with \textbf{Google OAuth} 2.0, session authentication, and responsive client-side navigation.}
+        \resumeItemListEnd
+\resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
 \section{Experience}
