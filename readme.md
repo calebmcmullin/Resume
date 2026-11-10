@@ -1,3 +1,3 @@
 # Welcome to My Resume
 
-[📄 View My Resume](resume.pdf)
+[📄 View My Resume (pdf)](resume.pdf)
